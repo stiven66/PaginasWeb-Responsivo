@@ -1,0 +1,344 @@
+*{
+    display: flexbox;
+}
+#pie {/* Poscicion de pie de pagina para que quede a lo ultimo de la pagina y centrado */
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;    
+    margin-bottom: 20px;
+}
+#pie > p{/*Aca le damos estilo a los hijos del pie de pagina osea a los parrafos: tipo de letra tamaño y color*/
+    margin: 0;
+    font-family:"Kapakana", cursive;
+    font-size: 28px;
+    color: aliceblue;
+}
+#icon{
+    color: aqua;/* Estilo para dar color al icono*/
+}
+header{
+    text-align: center;/* Centrar texto del encabezado */
+    margin-left: 30%;
+    margin-right: 30%;
+    animation: animation-crazy 2s infinite;/* Animacion al encabezado qeu cambia de colores */
+    transform: translateY(0px);
+    margin-bottom: 30px;
+}
+header #ninja{/* Este selector sirve para poscicionar el icono del ninja dentro de la animacion del titulo del encabezado */
+    margin-left: 5%;
+    margin-top: -3.4%;
+    color: rgb(195, 237, 233);
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+}  
+@keyframes animation-crazy{/* Animacion que hace un cuadro que cambia de color */
+    from {background: blue;}
+    to {background: rgb(121, 30, 45);}
+}
+i{
+    color: black;
+    font-size: 250%;
+}
+body{
+    background: linear-gradient(rgb(144, 179, 240),rgb(93, 2, 84));/* Degradado para el color de fondo de pagina */
+}
+h1{
+    transform: translateY(4px);
+    color: aliceblue;
+    font-family: "Dancing Script", cursive;   /* Tipo de letra que se importo */ 
+}
+section{/* A las 3 secciones le dimos un borde y le dimos un tamaño pequeño */
+    border: solid 2px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.content{
+    border-color:rgb(0, 255, 242);
+    color: azure;
+    background: linear-gradient(90deg);
+    right: 50%;
+    transform: translateZ(-110px);
+    margin-top: 100px;
+    background-color:aquamarine;
+    transition: background-color 1s;
+    transition: padding 1s;
+    transition: rotate 1s; */
+    transform:rotateX('angle');
+    box-shadow: 10px 10px 18px rgb(5, 2, 169);/* Le da sombra detras del elemento*/
+    font-family: "Playwrite HU", cursive;
+}
+.content:hover{/* Lo inclina tres grados y lo cambia de color */
+    background: linear-gradient(90deg,blue,red);
+    padding: 40px;
+    rotate: 3deg;
+}
+main{ /* Agregamos una imagen la poscicionamos que quedara del ancho de la pagina */
+    display: flex;
+    margin: -15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(imagen/header-mortal-kombat-x-sub-zero-vs-scorpion.avif);
+    height: 700px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: -190px;
+}
+.effects:hover{/* Cuando pasamos el cursor cambia el tipo de letra, el color degradado y le llamamos la animacion que hace que vibre*/
+    background: linear-gradient(rgb(229, 118, 229),rgb(236, 236, 138));
+    font-family: "Playwrite HU", cursive;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 10px 10px 18px rgb(223, 1, 1);
+    animation: wiggle 0.2s;
+}
+.interactivity{
+    font-family: "Playwrite HU", cursive;
+    box-shadow: 10px 10px 18px rgb(4, 255, 192);
+    animation: fadein 1.2s infinite;
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes wiggle{/* Animacion que hace vibrar elemento effects cundo se pasa el cursor por encima*/
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    75%{transform: rotate(5deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes crece {/* Animacion que hace crecer el elmento y le cambia el color de degradado */
+    0%{
+        transform: scale(1);
+        font-size: 1rem;
+        color: antiquewhite;
+    }
+    100%{
+        transform: scale(1.2);
+        font-size: 1.5rem;
+        background: linear-gradient(white,purple);
+    }
+}
+.interactivity:hover{/*Cuando pasamos el cursor aplicamos esta animacion de crecer*/
+    animation: crece 0.3s forwards;
+}
+.effects{
+    background: linear-gradient(rgb(224, 224, 55),grey);
+}
+a:hover{
+    animation: crecemas 0.3s forwards;
+    color: chartreuse;
+    text-decoration: underline;
+
+}
+@keyframes crecemas {/* Animacion que controla el crecimiento del elemento*/
+    0%{
+        transform: scale(2);
+        font-size: 2rem;
+        background-color: linear-gradient(white,purple);
+    }
+    100%{
+        transform: scale(2.2);
+        font-size: 2rem;
+        color: brown;
+        background: rgb(156, 156, 224);
+    }
+}
+#parrafo_principal{/* Estilizamos el tipo de letra un color degrado de fondo le damos transparencia y tamaño de letra */
+    background: linear-gradient(aquamarine,rgb(239, 161, 239));
+    border: 2 px solid #000;
+    box-shadow: 5px, 5px, 10px rgba(0, 0, 0, 0.5);
+    padding: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 28px;
+    opacity: 80%;
+    font-family: "Dancing Script", cursive;
+}
+#uno{
+    transform: translateY(295px);
+    display: flex;
+    margin-left: 90%;
+    color: rgb(182, 194, 227);
+}
+#dos{
+    transform: translateY(295px);
+    display: flex;
+    margin-left: 78%;
+    color: rgb(182, 194, 227);
+}
+#tres{
+    transform: translateY(295px);
+    display: flex;
+    margin-left: 66%;
+    color: rgb(182, 194, 227);
+}
+#cuatro{
+    transform: translateY(390px);
+    display: flex;
+    margin-left: 90%;
+    color: rgb(182, 194, 227);
+}
+#cinco{
+    transform: translateY(390px);
+    display: flex;
+    margin-left: 78%;
+    color: rgb(182, 194, 227);
+}
+#seis{
+    transform: translateY(390px);
+    display: flex;
+    margin-left: 66%;
+    color: rgb(182, 194, 227);
+}
+#siete{
+    transform: translateY(490px);
+    display: flex;
+    margin-left: 90%;
+    color: rgb(182, 194, 227);
+}
+#ocho{
+    transform: translateY(490px);
+    display: flex;
+    margin-left: 78%;
+    color: rgb(182, 194, 227);
+}
+#nueve{
+    transform: translateY(490px);
+    display: flex;
+    margin-left: 66%;
+    color: rgb(182, 194, 227);
+}
+#diez{
+    transform: translateY(580px);
+    display: flex;
+    margin-left: 86%;
+    color: rgb(182, 194, 227);
+}
+#once{
+    transform: translateY(580px);
+    display: flex;
+    margin-left: 76%;
+    color: rgb(182, 194, 227);
+}
+#pimenton{
+    transform: translateY(-95px);
+    display: flex;
+    margin-left: 47%;
+    font-size: 100px;
+    margin-bottom: -29%;
+    color: rgb(0, 255, 136);
+}
+#doce{
+    transform: translateY(305px);
+    display: flex;
+    margin-left: 7%;
+    color: rgb(182, 194, 227);
+}
+#trece{
+    transform: translateY(305px);
+    display: flex;
+    margin-left: 19%;
+    color: rgb(182, 194, 227);
+}
+#catorce{
+    transform: translateY(305px);
+    display: flex;
+    margin-left: 31%;
+    color: rgb(182, 194, 227);
+}
+#quince{
+    transform: translateY(410px);
+    display: flex;
+    margin-left: 7%;
+    color: rgb(182, 194, 227);
+}
+#dieciceis{
+    transform: translateY(410px);
+    display: flex;
+    margin-left: 19%;
+    color: rgb(182, 194, 227);
+}
+#dieciciete{
+    transform: translateY(410px);
+    display: flex;
+    margin-left: 31%;
+    color: rgb(182, 194, 227);
+}
+#dieciocho{
+    transform: translateY(515px);
+    display: flex;
+    margin-left: 7%;
+    color: rgb(182, 194, 227);
+}
+#diecinueve{
+    transform: translateY(515px);/* Poscicion de altura */
+    display: flex;/* Hacerlo flexible para darle una poscicion facilmente */
+    margin-left: 19%; /* Poscicion de ancho */
+    color: rgb(182, 194, 227);
+}
+#veinte{
+    transform: translateY(515px);/* Toda esta seccion de iconos enumerados del 1 al 22 se le da estilo para darles una poscicion de ancho y de altura con un color especifico*/
+    display: flex;
+    margin-left: 31%;
+    color: rgb(182, 194, 227);
+}
+#veintiuno{
+    transform: translateY(605px);
+    display: flex;
+    margin-left: 14%;
+    color: rgb(182, 194, 227);
+}
+#ventidos{
+    transform: translateY(605px);
+    display: flex;
+    margin-left: 24%;
+    color: rgb(182, 194, 227);
+}
+@keyframes animation{/* Animacion que controla transparencia de un elemento */
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.box{
+    color: rebeccapurple;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    animation: animation 1.5s infinite;
+    margin-left: 30%;
+}
+#imgnnj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ninja {
+    color: rgb(119, 0, 255);
+    font-size: 3rem;
+    transition: all 0.3s ease;
+}
+#ninja:hover{
+    color: rgb(136, 0, 255);
+    transform: translateY(-2px);
+}
+#icon {
+    color: rgb(107, 189, 216);
+    font-size: 3rem;
+    transition: all 0.3s ease;
+}
+#icon:hover{
+    color: rgb(136, 0, 255);/* Animacion que hace cambiar el color cuando pasamos el cursor por encima*/
+    transform: translateY(-2px);/* Animacion que hace crecer el icono cuando pasamos elcursor por encima*/
+}
